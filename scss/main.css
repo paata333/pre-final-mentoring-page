@@ -49,6 +49,19 @@ nav {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  gap: 0.2rem;
+}
+
+.heading::after {
+  content: "";
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #1576D8;
 }
 
 .header-icons {

@@ -19,10 +19,16 @@ nav{
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-
+    @include mixin.flex($flex: flex, $align:center,$justify:none, $gap-size:0.2rem)
 } 
-
+.heading::after{
+    content : "";
+    border-radius: 50%;
+    display: inline-block;
+    width: 0.6rem;
+    height:0.6rem;
+    background-color: variables.$color-of-dot-of-logo;
+}
 .header-icons{
     @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:3rem,);
-
 }
