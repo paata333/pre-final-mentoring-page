@@ -1,3 +1,55 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixin";
 @use "../base/reset";
+.career{
+    margin-top: 4rem;
+    @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:none);
+    flex-direction: column;
+
+    .text_container{
+        @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:none);
+        flex-direction: column;
+        h1{
+            font-size: 3.6rem;
+            font-weight: 600;
+            letter-spacing: 0.02rem;
+            line-height: 0.4rem;
+        }
+        .paragraph{
+            @include mixin.a($weight:400);
+            color:variables.$text-color;
+            line-height: 2.8rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    
+        div{
+            @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:0.8rem);
+            .get_started{
+                @include mixin.get-strated($color:white)
+            }
+            figure{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 4rem;
+                height: 4rem;
+                background-color: white;
+                border-radius: 50%;
+                align-items: center;
+                img{
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+            p{
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 100%;
+                color: variables.$text-color;
+            }
+            
+        }   
+ 
+    }
+}
