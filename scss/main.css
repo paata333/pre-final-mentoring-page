@@ -14,6 +14,19 @@ html {
   font-size: 62.5%;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  color: #fff;
+}
+
 .burger-menu {
   display: flex;
   align-items: center;
@@ -30,7 +43,7 @@ html {
   border-radius: 0.2rem;
 }
 
-nav {
+.mobile {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,4 +82,69 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    background-color: #052A44;
+    margin-top: 2rem;
+    padding: 3.3rem 3rem;
+  }
+  .desktop h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Poppins";
+    line-height: 100%;
+  }
+  .desktop ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.2rem;
+  }
+  .desktop ul li a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+    font-family: "Poppins";
+  }
+  .desktop .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .desktop .buttons div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .desktop .buttons div .sign-in, .desktop .buttons div .free-trial {
+    padding: 1.5rem 4.3rem;
+    border-radius: 1.2rem;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s ease;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+    font-family: "Poppins";
+  }
+  .desktop .buttons div .sign-in:hover, .desktop .buttons div .free-trial:hover {
+    background-color: #fff;
+    color: black;
+  }
 }/*# sourceMappingURL=main.css.map */

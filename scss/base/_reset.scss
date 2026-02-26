@@ -9,7 +9,18 @@ body{
     background-color: variables.$dark-theme;
     width: 100%;
     padding: 0 2.3rem ;
+
 }
 html{
     font-size: 62.5%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: variables.$text-color;
+}
+h1{
+    color: variables.$text-color;
 }

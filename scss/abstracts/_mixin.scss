@@ -5,3 +5,14 @@
   gap: $gap-size;
 }
 
+@mixin a($weight){
+  font-weight: $weight;
+  font-size: 1.6rem;
+  line-height: 100%;
+  font-family: 'Poppins';
+}
+
+@mixin buttons{
+  padding: 1.5rem 4.3rem;
+  
+}

@@ -2,7 +2,7 @@
 @use "../base/reset";
 @use "../abstracts/mixin";
 
-nav{
+.mobile{
     @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:none,);
     padding: 3.2rem 0 ;
 }
@@ -31,4 +31,51 @@ nav{
 }
 .header-icons{
     @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:3rem,);
+}
+.desktop{
+    display: none;
+}
+@media (min-width:768px){
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        @include mixin.flex($flex:flex, $align:center, $justify:space-between, $gap-size:0,);
+        background-color:variables.$desktop-nav-bar-color;
+        margin-top: 2rem;
+        padding: 3.3rem 3rem;
+        h1{
+            font-size:2rem ;
+            font-weight: 500;
+            font-family: 'Poppins';
+            line-height: 100%;
+        }
+        ul{
+            @include mixin.flex($flex:flex, $justify:space-between, $align:center, $gap-size:2.2rem);
+            li{
+                a{
+                    @include mixin.a($weight:400);
+                }
+            }
+        }
+        .buttons{
+            @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:3rem);
+            div{
+                @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:2.5rem);
+                .sign-in, .free-trial{
+                    padding: 1.5rem 4.3rem;
+                    border-radius: 1.2rem;
+                    background-color: transparent;
+                    color: #fff;
+                    text-decoration: none;
+                    transition:  0.5s ease;
+                    @include mixin.a($weight:400);
+                }
+                .sign-in:hover, .free-trial:hover{
+                    background-color: #fff;
+                    color: black;   
+                }
+            }
+        }
+    }
 }
