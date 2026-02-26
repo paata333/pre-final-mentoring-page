@@ -1,0 +1,28 @@
+@use "../abstracts/variables";
+@use "../base/reset";
+@use "../abstracts/mixin";
+
+nav{
+    @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:none,);
+    padding: 3.2rem 0 ;
+}
+.theme-icon{
+    background-color: variables.$dark-theme;
+    border: 0 solid;
+}
+.heading{
+    font-size: 3rem;
+    background: linear-gradient(
+        to right,
+        variables.$logo-first-gradient,
+        variables.$logo-second-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+} 
+
+.header-icons{
+    @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:3rem,);
+
+}

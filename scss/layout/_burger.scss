@@ -1,0 +1,16 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+@use "../base/reset";
+
+.burger-menu{
+    @include mixin.flex($flex:flex ,$align:center, $justify:center, $gap-size:0.4rem);
+    flex-direction: column;
+    background-color: variables.$dark-theme;
+    border: 0 solid;
+    span{
+        background-color: variables.$span-burger-menu-color;
+        height: 0.3rem;
+        width: 2.2rem;
+        border-radius: 0.2rem;
+    }
+}

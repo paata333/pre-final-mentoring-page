@@ -1,0 +1,59 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1E2A39;
+  width: 100%;
+  padding: 0 2.3rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.burger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-direction: column;
+  background-color: #1E2A39;
+  border: 0 solid;
+}
+.burger-menu span {
+  background-color: #fff;
+  height: 0.3rem;
+  width: 2.2rem;
+  border-radius: 0.2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: none;
+  padding: 3.2rem 0;
+}
+
+.theme-icon {
+  background-color: #1E2A39;
+  border: 0 solid;
+}
+
+.heading {
+  font-size: 3rem;
+  background: linear-gradient(to right, #D9D9D9, #5C90D4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}/*# sourceMappingURL=main.css.map */
