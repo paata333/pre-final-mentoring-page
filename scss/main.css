@@ -55,7 +55,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: none;
+  gap: 1rem;
   flex-direction: column;
 }
 .career .text_container h1 {
@@ -81,10 +81,11 @@ h1 {
   gap: 0.8rem;
 }
 .career .text_container div .get_started {
-  padding: 0.5rem 2.3rem;
+  padding: 0.4rem 1.2rem;
   border-radius: 1.2rem;
   background-color: white;
   color: black;
+  border-radius: 0rem solid;
 }
 .career .text_container div figure {
   display: flex;
@@ -110,17 +111,17 @@ h1 {
 .rectangle-div {
   background-color: #E8DB84;
   border-radius: 0.8rem;
-  height: 17.5rem;
-  width: 21.7rem;
+  height: clamp(17.5rem, 30vw, 26rem);
+  width: clamp(21.7rem, 45vw, 35rem);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: none;
+  gap: 5rem;
+  position: relative;
 }
 .rectangle-div .girl-img {
   width: 18.1rem;
   height: 20rem;
-  margin-left: -10rem;
   margin-top: -3.5rem;
   width: auto;
 }
@@ -128,9 +129,11 @@ h1 {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  position: absolute;
   flex-direction: column;
-  margin-left: 4rem;
+  left: -18%;
+  z-index: 2;
 }
 .rectangle-div .card-container .card {
   display: flex;
@@ -140,33 +143,54 @@ h1 {
   flex-direction: column;
   background-color: #fff;
   border-radius: 0.5rem;
-  padding: 0.3rem;
+  padding: clamp(0.5rem, 1vw, 0.9rem);
 }
 .rectangle-div .card-container .card p {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
   font-family: "Avenir LT Std";
   font-weight: 700;
   color: #1E2A39;
   text-align: center;
 }
 .rectangle-div .card-container .card .card-content {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   font-weight: 350;
   color: #2E2E2E;
 }
 .rectangle-div .card-container .cards-width {
-  width: 8.5rem;
+  width: clamp(8.5rem, 17vw, 12rem);
+}
+
+.icon-with-text {
+  display: none !important;
 }
 
 @media (min-width: 768px) {
   .career {
     flex-direction: row;
+    gap: 6rem;
   }
-  .text_container {
+  .career .text_container {
     align-items: start !important;
+  }
+  .career .text_container div .get_started {
+    padding: 1.5rem 4.3rem;
+    border-radius: 1.2rem;
+    background-color: white;
+    color: black;
   }
   .paragraph {
     text-align: start !important;
+  }
+  .icon-with-text {
+    display: flex !important;
+  }
+  .icon-with-text img {
+    height: 4.2rem;
+  }
+  .icon-with-text p {
+    font-size: 1.3rem;
+    font-weight: 500;
   }
 }
 .mobile {
