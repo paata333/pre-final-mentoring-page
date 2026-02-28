@@ -69,6 +69,7 @@
         width: 18.1rem;
         height: 20rem;
         margin-top: -3.5rem;
+        right: 0;
         // height: clamp(16rem, 28vw, 24rem);
         // margin-top: clamp(-4rem, -5vw, -2rem);      
         width: auto; 
@@ -124,6 +125,7 @@
     }
     .paragraph{
         text-align: start !important;
+        max-width: 50rem!important;
     }
     .icon-with-text{
         display: flex !important;
@@ -133,8 +135,14 @@
         p{
             font-size: 1.3rem;
             font-weight: 500;
-            
+
         }
     }
     
+}
+@media (min-width:768px){
+    .paragraph{
+        text-align: start !important;
+        max-width: 70rem!important;
+    }
 }

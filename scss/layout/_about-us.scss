@@ -1,3 +1,61 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixin";
 @use "../base/reset";
+
+.about-us{
+    @include mixin.flex($flex:flex ,$align:center, $justify:center, $gap-size:5rem) ;
+    flex-direction: column;
+    margin-top: 4rem;
+    .heading-about-us{
+        font-size:2.8rem ;
+        color: variables.$text-color;
+        font-weight:400 ;
+    }
+    .pargraph-about-us{
+        font-size:1.6rem ;
+        font-weight:400 ;
+        color: variables.$text-color;
+        text-align: center;
+        font-family: 'Open Sans';
+        line-height: 2.8rem;
+    }
+    .about-us-cards{
+        @include mixin.flex($flex:flex ,$align:center, $justify:center, $gap-size:5rem) ;
+        flex-direction: column;
+        figure{
+            background-color: variables.$card-backgorund-color;
+            border-radius: 1.1rem;
+            padding: 4.9rem 2.2rem;
+            position: relative;
+            img{
+                position: absolute;
+                margin-left: 25%;
+                margin-top: -33%;
+            }
+            h1{
+                color: black;
+                font-weight:600 ;
+                font-size: 1.8rem;
+                line-height: 100%;
+                text-align: center;
+            }
+            p{
+                font-weight: 300;
+                font-size:1.6rem ;
+                line-height: 180%;
+                text-align: center;
+            }
+        }
+    }
+    .get-started-about-us{
+        @include mixin.get-started($color:variables.$learn-more-button);
+        color: variables.$text-color;
+    }
+}
+
+@media (min-width:768px){
+    .about-us-cards{
+        flex-direction: row !important;
+    }
+    
+}
