@@ -7,8 +7,8 @@
     padding: 3.2rem 0 ;
 }
 .theme-icon{
-    background-color: variables.$dark-theme;
-    border: 0 solid;
+    background-color: transparent;
+    border: none;
 }
 .heading{
     font-size: 3rem;
@@ -31,6 +31,10 @@
 }
 .header-icons{
     @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:3rem,);
+}
+.img-header-icon, .dark-icon{
+    width: 2.4rem;
+    height: 2.4rem;
 }
 .desktop{
     display: none;
@@ -77,5 +81,8 @@
                 }
             }
         }
+    }
+    .dark-icon{
+        background-color: transparent!important;
     }
 }

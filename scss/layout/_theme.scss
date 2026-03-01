@@ -1,0 +1,85 @@
+
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+@use "../base/reset";
+
+/* ---------------- DEFAULT THEME ---------------- */
+input{
+  display: none;
+}
+body {
+  background-color: variables.$dark-theme;
+
+}
+
+
+.burger-menu{
+  color: white;
+}
+.card,.dark-icon {
+      display: none;
+      background-color: white;
+}
+  /* ---------------- LIGHT THEME ---------------- */
+
+body:has(#theme-toggle:checked) {
+  background-color: #ffffff;
+  color: #111111;
+  input{
+    display: none;
+  }
+}
+
+  /* ტექსტები */
+body:has(#theme-toggle:checked) h1, 
+body:has(#theme-toggle:checked) h2,  
+body:has(#theme-toggle:checked) p,
+body:has(#theme-toggle:checked) a {
+  color: #111111;
+}
+body:has(#theme-toggle:checked) .heading{
+  font-size: 3rem;
+  background: linear-gradient(to right,#254A72, #10243E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  @include mixin.flex($flex: flex, $align:center,$justify:none, $gap-size:0.2rem)
+}
+body:has(#theme-toggle:checked) .about-us-cards figure{
+  box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.08);
+}
+  /* Cards */
+body:has(#theme-toggle:checked) .card,
+body:has(#theme-toggle:checked) .about-us,
+body:has(#theme-toggle:checked) footer {
+   // background-color: #f5f5f5;
+  color: #111111;
+}
+body:has(#theme-toggle:checked) .burger-menu{
+  background-color: white;
+}
+body:has(#theme-toggle:checked) .circle-figure{
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+}
+  
+.burger-menu span {
+  background-color: white;
+  transition: 0.3s;
+}
+body:has(#theme-toggle:checked) {
+  .burger-menu span {
+    background-color: black;
+  }
+  .desktop h1,ul li a,.buttons div a{
+    color: white!important;
+  }
+  .img-header-icon{
+    display: none;
+  }
+  .dark-icon {
+    display: inline-block;
+  }
+}
+
+
+  

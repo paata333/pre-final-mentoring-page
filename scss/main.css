@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -151,7 +152,7 @@ h1 {
   border-radius: 1.2rem;
   background-color: white;
   color: black;
-  border-radius: 0rem solid;
+  border: 0rem solid;
 }
 .career .text_container div figure {
   display: flex;
@@ -164,8 +165,7 @@ h1 {
   align-items: center;
 }
 .career .text_container div figure img {
-  margin-right: auto;
-  margin-left: auto;
+  margin-left: 1.5rem;
 }
 .career .text_container div p {
   font-size: 1.4rem;
@@ -369,8 +369,8 @@ hr {
 }
 
 .theme-icon {
-  background-color: #1E2A39;
-  border: 0 solid;
+  background-color: transparent;
+  border: none;
 }
 
 .heading {
@@ -399,6 +399,11 @@ hr {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
+}
+
+.img-header-icon, .dark-icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .desktop {
@@ -464,4 +469,90 @@ hr {
     background-color: #fff;
     color: black;
   }
+  .dark-icon {
+    background-color: transparent !important;
+  }
+}
+/* ---------------- DEFAULT THEME ---------------- */
+input {
+  display: none;
+}
+
+body {
+  background-color: #1E2A39;
+}
+
+.burger-menu {
+  color: white;
+}
+
+.card, .dark-icon {
+  display: none;
+  background-color: white;
+}
+
+/* ---------------- LIGHT THEME ---------------- */
+body:has(#theme-toggle:checked) {
+  background-color: #ffffff;
+  color: #111111;
+}
+body:has(#theme-toggle:checked) input {
+  display: none;
+}
+
+/* ტექსტები */
+body:has(#theme-toggle:checked) h1,
+body:has(#theme-toggle:checked) h2,
+body:has(#theme-toggle:checked) p,
+body:has(#theme-toggle:checked) a {
+  color: #111111;
+}
+
+body:has(#theme-toggle:checked) .heading {
+  font-size: 3rem;
+  background: linear-gradient(to right, #254A72, #10243E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  gap: 0.2rem;
+}
+
+body:has(#theme-toggle:checked) .about-us-cards figure {
+  box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Cards */
+body:has(#theme-toggle:checked) .card,
+body:has(#theme-toggle:checked) .about-us,
+body:has(#theme-toggle:checked) footer {
+  color: #111111;
+}
+
+body:has(#theme-toggle:checked) .burger-menu {
+  background-color: white;
+}
+
+body:has(#theme-toggle:checked) .circle-figure {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.burger-menu span {
+  background-color: white;
+  transition: 0.3s;
+}
+
+body:has(#theme-toggle:checked) .burger-menu span {
+  background-color: black;
+}
+body:has(#theme-toggle:checked) .desktop h1, body:has(#theme-toggle:checked) ul li a, body:has(#theme-toggle:checked) .buttons div a {
+  color: white !important;
+}
+body:has(#theme-toggle:checked) .img-header-icon {
+  display: none;
+}
+body:has(#theme-toggle:checked) .dark-icon {
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */

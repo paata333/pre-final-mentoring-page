@@ -30,7 +30,7 @@
                 border-radius: 1.2rem;
                 background-color: white;
                 color: black;
-                border-radius: 0rem solid;
+                border: 0rem solid;
             }
             figure{
                 display: flex;
@@ -42,8 +42,7 @@
                 border-radius: 50%;
                 align-items: center;
                 img{
-                    margin-right: auto;
-                    margin-left: auto;
+                    margin-left: 1.5rem;
                 }
             }
             p{
