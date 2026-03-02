@@ -1,3 +1,147 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixin";
 @use "../base/reset";
+.career{
+    margin-top: 4rem;
+    @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:3rem);
+    flex-direction: column;
+    .text_container{
+        @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:1rem);
+        flex-direction: column;
+        h1{
+            font-size: 3.6rem;
+            font-weight: 600;
+            letter-spacing: 0.02rem;
+            line-height: 0.4rem;
+        }
+        .paragraph{
+            @include mixin.a($weight:400);
+            color:variables.$text-color;
+            line-height: 2.8rem;
+            text-align: center;
+            margin-top: 2rem;
+            
+        }
+        div{
+            @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:0.8rem);
+            .get_started{
+                // @include mixin.get-strated($color:white);
+                padding: 0.4rem 1.2rem ;
+                border-radius: 1.2rem;
+                background-color: white;
+                color: black;
+                border: 0rem solid;
+            }
+            figure{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 4rem;
+                height: 4rem;
+                background-color: white;
+                border-radius: 50%;
+                align-items: center;
+                img{
+                    margin-left: 1.5rem;
+                }
+            }
+            p{
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 100%;
+                color: variables.$text-color;
+            }
+
+        }
+
+    }
+}
+
+.rectangle-div{
+    background-color: variables.$rectangle-div-color;
+    border-radius: 0.8rem;
+    height: clamp(17.5rem, 30vw, 26rem);
+    width: clamp(21.7rem, 45vw, 35rem);
+    @include mixin.flex($flex:flex ,$align:center, $justify:center, $gap-size:5rem) ;
+    position: relative;
+    .girl-img{
+        width: 18.1rem;
+        height: 20rem;
+        margin-top: -3.5rem;
+        right: 0;
+        // height: clamp(16rem, 28vw, 24rem);
+        // margin-top: clamp(-4rem, -5vw, -2rem);      
+        width: auto; 
+    }
+    .card-container{
+        @include mixin.flex($flex:flex, $align:stretch, $justify:center,$gap-size:0.4rem);
+        position: absolute;
+        flex-direction: column;
+        left: -18%;         
+        z-index: 2;
+        .card{
+            @include mixin.flex($flex:flex, $align:center, $justify:center,$gap-size:0.3rem);
+            flex-direction: column;
+            background-color: variables.$card-backgorund-color;
+            border-radius: 0.5rem;
+            padding: clamp(0.5rem, 1vw, 0.9rem);
+            p{
+                font-size: clamp(1rem, 1.4vw, 1.35rem);
+                font-family: 'Avenir LT Std';
+                font-weight: 700;
+                color: variables.$cards-text-color-heading;
+                text-align: center;
+            }
+            .card-content{
+                font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+                font-weight: 350;
+                color: variables.$cards-text-color;
+            }
+        }
+        .cards-width{
+            width: clamp(8.5rem, 17vw, 12rem);
+        }
+    }
+}
+.icon-with-text{
+   display: none !important;     
+}
+
+
+
+
+@media (min-width:768px){
+    .career{
+        flex-direction: row;
+        gap: 6rem;
+        .text_container{
+            align-items: start !important;
+            div .get_started{
+                @include mixin.get-started($color:white);
+
+            }
+        }
+    }
+    .paragraph{
+        text-align: start !important;
+        max-width: 50rem!important;
+    }
+    .icon-with-text{
+        display: flex !important;
+        img{
+            height: 4.2rem;
+        }
+        p{
+            font-size: 1.3rem;
+            font-weight: 500;
+
+        }
+    }
+    
+}
+@media (min-width:768px){
+    .paragraph{
+        text-align: start !important;
+        max-width: 70rem!important;
+    }
+}

@@ -2,13 +2,13 @@
 @use "../base/reset";
 @use "../abstracts/mixin";
 
-nav{
+.mobile{
     @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:none,);
     padding: 3.2rem 0 ;
 }
 .theme-icon{
-    background-color: variables.$dark-theme;
-    border: 0 solid;
+    background-color: transparent;
+    border: none;
 }
 .heading{
     font-size: 3rem;
@@ -19,10 +19,70 @@ nav{
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-
+    @include mixin.flex($flex: flex, $align:center,$justify:none, $gap-size:0.2rem)
 } 
-
+.heading::after{
+    content : "";
+    border-radius: 50%;
+    display: inline-block;
+    width: 0.6rem;
+    height:0.6rem;
+    background-color: variables.$color-of-dot-of-logo;
+}
 .header-icons{
     @include mixin.flex($flex:flex, $align:center, $justify: space-between, $gap-size:3rem,);
-
+}
+.img-header-icon, .dark-icon{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.desktop{
+    display: none;
+}
+@media (min-width:768px){
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        @include mixin.flex($flex:flex, $align:center, $justify:space-between, $gap-size:0,);
+        background-color:variables.$desktop-nav-bar-color;
+        margin-top: 2rem;
+        padding: 3.3rem 3rem;
+        h1{
+            font-size:2rem ;
+            font-weight: 500;
+            font-family: 'Poppins';
+            line-height: 100%;
+        }
+        ul{
+            @include mixin.flex($flex:flex, $justify:space-between, $align:center, $gap-size:2.2rem);
+            li{
+                a{
+                    @include mixin.a($weight:400);
+                }
+            }
+        }
+        .buttons{
+            @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:1rem);
+            div{
+                @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:2rem);
+                .sign-in, .free-trial{
+                    padding: 1.5rem 3rem;
+                    border-radius: 1.2rem;
+                    background-color: transparent;
+                    color: #fff;
+                    text-decoration: none;
+                    transition:  0.5s ease;
+                    @include mixin.a($weight:400);
+                }
+                .sign-in:hover, .free-trial:hover{
+                    background-color: #fff;
+                    color: black;   
+                }
+            }
+        }
+    }
+    .dark-icon{
+        background-color: transparent!important;
+    }
 }

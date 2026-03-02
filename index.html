@@ -10,26 +10,138 @@
     <title>carer path</title>
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle">
+
     <header>
-        <nav>
+        <nav class="mobile">
             <h1 class="heading">ehya</h1>
 
             <figure class="header-icons">
-                <button class="theme-icon">
-                    <img class="img-header-icon" src="assets/Vector.png" alt="#">
+                <label class="theme-icon" for="theme-toggle">
+
+                    <img class="img-header-icon" src="assets/Vector (1).svg" alt="#">
+                    <img class="dark-icon" src="assets/Vector.svg" alt="#">
+                </label>
+
+                <button class="burger-menu" popovertarget="my-popover">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
 
-                <button class="burger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div popover id="my-popover">
+                    <nav class="burger-nav">
+                        <ul class="burger-button-list">
+                            <li><a href="#" class="burger-button-item">Home</a></li>
+                            <li><a href="#" class="burger-button-item">About US</a></li>
+                            <li><a href="#" class="burger-button-item">Services</a></li>
+                            <li><a href="#" class="burger-button-item">Contact</a></li>
+                            <li><a href="#" class="burger-button-item">Sign In</a></li>
+                            <li><a href="#" class="burger-button-item">Free Trial</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
             </figure>
+        </nav>
+
+        <nav class="desktop">
+            <h1>CareerPathNow</h1>
+
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            
+
+            <div class="buttons">
+                <label class="theme-icon" for="theme-toggle">
+
+                    <img class="img-header-icon" src="assets/Vector (1).svg" alt="#">
+                    <img class="dark-icon" src="assets/Vector-white.svg" alt="#">
+                </label>
+                <div >
+                    <a href="#" class="sign-in">sign-in</a>
+                    <a href="#" class="free-trial">Free trial</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <section></section>
         <section></section>
+        <section class="career">
+
+            <article class="text_container">
+                <h1>CareerPathNow</h1>
+                <p class="paragraph">CareerPathNow is a renowned career counselling organization that helps individuals make informed decisions about their career paths.</p>
+                <div>
+                    <button class="get_started">Get started</button>
+                    
+                    <figure >
+                        <img class="circle-figure" src="./assets/Polygon 3.png" alt="#">
+                    </figure>
+                    <p >Learn More</p>
+                </div>
+                <div class="icon-with-text">
+                    <img src="./assets/Frame 982.svg" alt="#">
+                    <p>10K+ satisfied students</p>
+                </div>
+            </article>
+           
+            <figure class="rectangle-div">
+
+
+                <div class="card-container">
+
+                    <article class="card">
+                        <p>Our Happy Users</p>
+                        <p class="card-content">200+ Online User </p>
+                        <img src="./assets/Group 1000001809.png" alt="#">
+                    </article>
+                    <article class="card cards-width">
+                        <p>27K</p>
+                        <p class="card-content">Member Joined </p>
+                        <img src="./assets/Group 4247.svg" alt="#">
+                    </article>
+                    <article class="card cards-width">
+                        <p>27K</p>
+                        <p class="card-content">Member Joined </p>
+                        <img src="./assets/Group 4247.svg" alt="#">
+                    </article>
+
+                </div>
+                <img class="girl-img" src="./assets/1a5ad28f73a99be8026222cd718181d9d1a0334b.png" alt="#">
+
+            </figure>
+            
+        </section>
+        
+        <section class="about-us">
+            <h1 class="heading-about-us">About US</h1>
+            <p class="pargraph-about-us">Skilline is one powerful online software suite that combines all the tools needed to run a successful school or office.
+            </p>
+            <div class="about-us-cards">
+                <figure>
+                    <img src="./assets/Group 1000004722.svg" alt="#">
+                    <h1>Mission</h1>
+                    <p>Tailored career solutions, industry-leading assessments, and expert counseling.</p>
+                </figure>
+                <figure>
+                    <img src="./assets/Group 1000004722.svg" alt="#">
+                    <h1>Values</h1>
+                    <p>Tailored career solutions, industry-leading assessments, and expert counseling.</p>
+                </figure>
+                <figure>
+                    <img src="./assets/Group 1000004722.svg" alt="#">
+                    <h1>Unique Selling Points</h1>
+                    <p>Tailored career solutions, industry-leading assessments, and expert counseling.</p>
+                </figure>
+            </div>
+            <button class="get-started-about-us">get started</button>
+        </section>
         <section class="our-services">
             <div class="illustration-container">
                 <div class="bg-circle"></div>
@@ -122,9 +234,35 @@
                 </div>
             </div>
         </section>
+       
+       
         <section></section>
         <section></section>
     </main>
-    <footer></footer>
+    <footer>
+        <h1 class="footer-heading">CareerPathNow</h1>
+        <address>
+            <div class="phone">
+                <p>Address of the organization</p>
+                <a href="tel:+01 787-8765456">+01 (787)-8765456</a>
+            </div>
+            <div>
+                <p>find us on social media</p>
+                <figure class="footer-icons">
+                    <div><img src="./assets/Facebook.png" alt="#"></div>
+                    <div><img src="./assets/Twitter.png" alt="#"></div>
+                    <div><img src="./assets/Instagram.png" alt="#"></div>   
+                </figure>
+            </div>
+            <div>
+                <p>We’re Always Happy To Help</p>
+                <a href="mailto:CareerPathNow@gmail.com">CareerPathNow@gmail.com</a>
+            </div>
+        </address>
+        <hr>
+        <p class="copy">Copyright © 2024 CareerPathNow</p>
+
+
+    </footer>
 </body>
 </html>

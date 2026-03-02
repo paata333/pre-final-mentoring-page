@@ -5,3 +5,17 @@
   gap: $gap-size;
 }
 
+@mixin a($weight){
+  font-weight: $weight;
+  font-size: 1.6rem;
+  line-height: 100%;
+  font-family: 'Poppins';
+}
+
+@mixin get-started($color){
+  padding: 1.5rem 4.3rem;
+  border-radius: 1.2rem;
+  background-color: $color;
+  color: black;
+  border: 0rem solid;
+}
