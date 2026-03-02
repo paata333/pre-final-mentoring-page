@@ -25,11 +25,11 @@
 
 }
 :root{
-    --margin-left:10px;
+    --margin-left:0px;
     --margin-top:9rem;
 }
 .burger-nav{
-    padding: 10rem 11.3rem;
+    padding: 10rem 1rem;
     background-color: variables.$dark-theme ;
 }
 @keyframes slidein {
@@ -46,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 5rem;
 }
 .burger-button-item{
     font-size: 1.7rem;
@@ -57,8 +57,16 @@
     padding: 1.5rem 4.2rem;
     border-radius: 1.2rem;
 }
-.burger-button-item:hover{
+
+body:has(#theme-toggle:checked) {
+   .burger-nav{
     background-color: white;
-    color: black;
-    
+        .burger-button-item{
+            color: black!important;
+        }
+   }
+   .burger-button-item:hover{
+        background-color: variables.$dark-theme ;
+        color: white!important;
+   }
 }

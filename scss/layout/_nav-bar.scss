@@ -63,11 +63,11 @@
             }
         }
         .buttons{
-            @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:3rem);
+            @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:1rem);
             div{
-                @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:2.5rem);
+                @include mixin.flex($flex:flex, $justify:center, $align:center, $gap-size:2rem);
                 .sign-in, .free-trial{
-                    padding: 1.5rem 4.3rem;
+                    padding: 1.5rem 3rem;
                     border-radius: 1.2rem;
                     background-color: transparent;
                     color: #fff;

@@ -26,11 +26,12 @@
             background-color: variables.$card-backgorund-color;
             border-radius: 1.1rem;
             padding: 4.9rem 2.2rem;
-            position: relative;
+            @include mixin.flex($flex:flex ,$align:center, $justify:center, $gap-size:none);
+            flex-direction: column;
             img{
-                position: absolute;
-                margin-left: 25%;
-                margin-top: -33%;
+               
+                margin-top: -9rem;
+                width: 10rem;
             }
             h1{
                 color: black;
