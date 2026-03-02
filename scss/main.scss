@@ -10,3 +10,12 @@
 @use "layout/reviews";
 @use "layout/services";
 @use "layout/stories";
+
+main,
+footer {
+  margin: 0 variables.$mobile-margin;
+
+  @media (min-width: 99.8rem) {
+    margin: 0 variables.$desktop-margin;
+  }
+}

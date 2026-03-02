@@ -1,3 +1,296 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixin";
 @use "../base/reset";
+
+.our-services {
+    background-color: rgba(232, 219, 132, 1);
+    width: 95%;
+    max-width: 124rem;
+    min-height: 79.7rem; 
+    height: auto; 
+    border-radius: 2.9rem;
+    margin: 2rem auto;
+    padding: 4rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    order: 1;
+}
+
+.our-services-container {
+    text-align: center;
+    max-width: 60rem;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: rgba(24, 59, 86, 1);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.career-services-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 35rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 1rem 0;
+}
+
+.icon-circle {
+    flex-shrink: 0;
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}
+
+.service-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.illustration-container {
+    position: relative;
+    width: 100%;
+    max-width: 35rem; 
+    margin: 4rem auto;
+    order: 2;
+
+    .bg-circle {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        width: 9.9rem;
+        height: 9.9rem;
+        background-color: rgba(5, 42, 68, 1);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .browser-window {
+        position: relative;
+        width: 100%;
+        background: rgba(244, 244, 244, 0.6);
+        border-radius: 0.6rem;
+        padding: 1rem;
+        backdrop-filter: blur(2.5rem);
+        z-index: 2;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        .browser-dots {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            
+            .dot {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                &.red { background: rgba(238, 103, 103, 1); }
+                &.orange { background: rgba(246, 197, 102, 1); }
+                &.green { background: rgba(91, 235, 123, 1); }
+            }
+        }
+
+        .images-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            img {
+                border-radius: 0.6rem;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .main-img {
+                height: 15rem;
+            }
+
+            .bottom-imgs {
+                display: flex;
+                gap: 1rem;
+                
+                .side-img {
+                    width: calc(50% - 0.5rem);
+                    height: 10rem;
+                }
+            }
+        }
+    }
+}
+
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    order: 3;
+}
+
+.get-started-btn {
+    background-color: rgba(5, 42, 68, 1);
+    color: #ffffff;
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #0a3a61; 
+        transform: translateY(-0.2rem);
+    }
+}
+
+
+/* Our-Services Desktop Version (1113px+) */
+@media (min-width: 1113px) {
+    .our-services {
+        display: grid;
+        width: 100%; 
+        max-width: 100%;
+        height: 59.8rem;
+        margin: 4.0rem auto;
+        padding: 0 9.6rem;
+        grid-template-columns: 46.2rem 51.5rem; 
+        grid-template-areas: 
+            "illustration content"
+            "illustration button"; 
+        justify-content: center; 
+        align-items: center;
+        column-gap: 8.7rem;
+        position: relative;
+    }
+
+    .illustration-container {
+        grid-area: illustration;
+        width: 46.2rem;
+        height: 47.4rem;
+        margin: 0;
+        order: unset;
+
+        .browser-window {
+            width: 46.2rem;
+            height: 45.0rem;
+            border-radius: 1.2rem;
+            padding: 2.4rem;
+
+            .browser-dots {
+                gap: 0.6rem;
+
+                .dot {
+                    width: 1.1rem;
+                    height: 1.1rem;
+                }
+            }
+
+            .images-grid .main-img {
+                height: 25.0rem;
+            }
+        }
+
+        .bg-circle {
+            width: 19.7rem;
+            height: 19.7rem;
+            bottom: -2.0rem;
+            left: -4.0rem;
+        }
+    }
+
+
+    .content-wrapper {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3.2rem;
+        order: unset;
+    }
+
+    .our-services-container {
+        max-width: 51.5rem;
+        text-align: left;
+        margin: 0;
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-size: 4.2rem;
+            font-weight: 600;
+            margin-bottom: 1.6rem;
+        }
+        p {
+            font-size: 1.8rem;
+            line-height: 1.4;
+        }
+    }
+
+    .career-services-container {
+        max-width: 27.7rem;
+        gap: 2.0rem;
+        margin: 0;
+
+        .service-item {
+            margin: 0;
+            .icon-circle {
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+            .service-text {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .cta-wrapper {
+        grid-area: button;
+        justify-content: flex-start;
+        align-self: start; 
+        margin-top: 1.0rem;
+        order: unset;
+    }
+
+    .get-started-btn {
+        width: 17.9rem;
+        height: 5.4rem;
+        font-size: 1.6rem;
+    }
+}
